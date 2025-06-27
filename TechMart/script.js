@@ -46,7 +46,7 @@ const actualizarCarrito = () => {
         div.className = "item-carrito";
         div.innerHTML = `
             <p><strong>${item.nombre}</strong> - S/. ${item.precio} x ${item.cantidad} = S/. ${subtotal}</p>
-            <button onclick="eliminarDelCarrito(${item.id})" class="btn-eliminar">🗑️ Eliminar</button>
+            <button onclick="eliminarDelCarrito(${item.id})" class="btn-eliminar"><i class="bi bi-trash3"></i> Eliminar</button>
         `;
         contenedor.appendChild(div);
     });
@@ -98,7 +98,7 @@ const procesarPago = event => {
     Swal.fire({
         icon: 'success',
         title: '¡Pago exitoso!',
-        text: `Gracias por tu compra, ${nombre.split(" ")[0]} 😄`,
+        text: `Gracias por tu compra, ${nombre.split(" ")[0]} <i class="bi bi-emoji-laughing">`,
     });
 
     carrito = [];
