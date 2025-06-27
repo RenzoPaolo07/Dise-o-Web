@@ -22,7 +22,7 @@ const agregarAlCarrito = (id, nombre, precio) => {
     actualizarCarrito();
     alerta.fire({
         icon: 'success',
-        title: `${nombre} agregado al carrito`,
+        title: `${nombre} agregado al carrito <i class="bi bi-cart-check">`,
     });
 };
 
